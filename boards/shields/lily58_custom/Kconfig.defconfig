@@ -1,11 +1,14 @@
-if SHIELD_LILY58_LEFT
+if SHIELD_LILY58_CUSTOM_LEFT
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_SPLIT
+    default y
+
 endif
 
-if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
+if SHIELD_LILY58_CUSTOM_RIGHT
 
 config ZMK_SPLIT
     default y
