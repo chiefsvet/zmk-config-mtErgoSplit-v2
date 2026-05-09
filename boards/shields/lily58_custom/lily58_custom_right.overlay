@@ -6,6 +6,17 @@
 
 #include "lily58.dtsi"
 
+/ {
+    chosen {
+        zephyr,display = &none_display;
+    };
+
+    none_display: none_display {
+        compatible = "zmk,no-op-display";
+        status = "okay";
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };
