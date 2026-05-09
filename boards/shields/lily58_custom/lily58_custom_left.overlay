@@ -39,6 +39,18 @@ nice_view_spi: &spi0 {
     status = "disabled";
 };
 
+&spi0 {
+    status = "okay";
+};
+
+&i2c0 {
+    status = "disabled";
+};
+
+&ssd1306 {
+    status = "disabled";
+};
+
 &kscan0 {
     col-gpios
         = <&pro_micro 19 GPIO_ACTIVE_HIGH>
