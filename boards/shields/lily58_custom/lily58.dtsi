@@ -9,11 +9,6 @@
 #include <layouts/kata0510/lily58.dtsi>
 
 / {
-    chosen {
-        zephyr,display = &oled;
-        zmk,kscan = &kscan0;
-        zmk,physical-layout = &kata0510_lily58_layout;
-    };
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
