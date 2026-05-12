@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "lily58.dtsi"
+#include "mtergosplit.dtsi"
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <7>;
 };
 
 &kscan0 {

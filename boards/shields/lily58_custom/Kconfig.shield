@@ -1,5 +1,0 @@
-config SHIELD_LILY58_CUSTOM_LEFT
-    def_bool $(shields_list_contains,lily58_custom_left)
-
-config SHIELD_LILY58_CUSTOM_RIGHT
-    def_bool $(shields_list_contains,lily58_custom_right)

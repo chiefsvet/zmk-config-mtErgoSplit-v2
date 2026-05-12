@@ -1,6 +1,6 @@
 # mtErgoSplit v2
 
-A Lily58-style, 58-key split mechanical keyboard built around the nice!nano v2 microcontroller and the nice!view OLED display..
+A Lily58-style, 58-key split mechanical keyboard built around the nice!nano v2 microcontroller and the nice!view OLED display.
 
 ---
 
@@ -13,48 +13,41 @@ A Lily58-style, 58-key split mechanical keyboard built around the nice!nano v2 m
 | MCU        | nice!nano v2                                   |
 | Firmware   | ZMK                                            |
 | Connection | USB-C (wired) & Bluetooth Low Energy           |
-| Display    | nice!view 128x64 OLED                          |
+| Display    | nice!view 160x68 OLED                          |
 | Layers     | 4 (Base, Raise\_R, Raise\_L, Fn\_Keys)         |
 
 ---
 
 ## Hardware
 
-### MCU — Waveshare RP2040-LCD-0.96
+### nice!nano v2
 
-A Raspberry Pi RP2040-based development board with a built-in 0.96" colour LCD. The display is initialised by the board firmware in portrait orientation (80×160 canvas) with correct colours — no custom display driver required.
+The nice!nano v2 is a Pro Micro replacement development board that has the same pinout as the Pro Micro, meaning it will work with almost any Pro Micro keyboard. The nice!nano also has a 3.7V lithium battery charger on board as well as a software level switch to cut off power to LEDs, which can eat 1mA each even when off!
 
-- Processor: RP2040 dual-core ARM Cortex-M0+ @ 133 MHz
-- Flash: 2 MB
-- Display: ST7735S, 160×80 px (portrait: 80×160)
-- USB: USB-C
+**Details from the nicekeyboards website**
+
+- Processor: nRF52840 chip
+- Memory: 1 MB of Flash & 256 kB of RAM
+- Connections: USB-C and Bluetooth Low Energy (BLE)
 - Power: USB or 3.7 V LiPo (onboard charging circuit, MX1.25 connector)
+- Clock: 32.768 kHz oscillator on board for real-time clock capabilities
+- Battery voltage reader that reports battery percentage
 
-### Optional — Adafruit DS3231 Precision RTC Breakout
+### Display
 
-Without this module the keyboard's clock resets to 2000-01-01 00:00 on every power cycle. With it, date and time persist across power cycles via a CR2032 coin cell on the RTC board.
+The nice!view is an SSD1306 OLED replacement display with one additional pin to allow adding it to existing boards. It "boasts > 1,000 x power savings."
 
-- Interface: I2C
-- Accuracy: ±2 ppm (temperature-compensated)
-- Backup: CR2032 coin cell (not included)
-- Wiring: SDA → GP2, SCL → GP3, VCC → 3.3 V, GND → GND
-
-To enable, replace the software RTC section in `code.py` with the DS3231 driver — see `wiring_and_build.md` for details.
+- Display: Sharp LS011B7DH03 display with 30 Hz refresh rate
+- Resolution: 160 x 68 pixels; diagonal size 1.08"
+- Dimensions: 36 x 14 x 2.9 mm 
+- Power: 3.3 V
+- Interface: 3-wire SPI
 
 ---
 
 ## Firmware
 
-**CircuitPython version:** 9.2.x
-**KMK version:** latest from https://github.com/KMKfw/kmk\_firmware
-
-### Required libraries (copy to `/CIRCUITPY/lib/`)
-
-| Library                  | Source                            |
-| ------------------------ | --------------------------------- |
-| `kmk/`                   | KMK GitHub repo                   |
-| `adafruit_display_text/` | Adafruit CircuitPython Bundle 9.x |
-| `adafruit_bitmap_font/`  | Adafruit CircuitPython Bundle 9.x |
+**ZMK:** Main (pre-release)
 
 ---
 
@@ -102,14 +95,7 @@ The status display shows (top to bottom):
 
 ## Battery (optional)
 
-The board has an onboard LiPo charging IC (ETA6096) and MX1.25 2-pin connector. A 3.7 V LiPo with integrated protection circuit connects directly. Charging occurs automatically via USB-C.
+The board accepts a
 
-To enable battery level reporting, wire a 100 kΩ / 100 kΩ voltage divider between LiPo+ and GND, connect the midpoint to GP26, and set `_USE_BATTERY_ADC = True` in `code.py`.
 
----
 
-## Known limitations
-
-- **Clock resets on power cycle** without DS3231 RTC module
-- **WPM tracking** not available in current KMK version
-- **Wireless** not supported on this MCU without hardware modification
