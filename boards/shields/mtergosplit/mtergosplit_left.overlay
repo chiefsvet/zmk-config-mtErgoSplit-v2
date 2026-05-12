@@ -39,10 +39,6 @@ nice_view_spi: &spi0 {
     status = "disabled";
 };
 
-&spi0 {
-    status = "okay";
-};
-
 &i2c0 {
     status = "disabled";
 };
