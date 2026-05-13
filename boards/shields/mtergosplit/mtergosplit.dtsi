@@ -36,6 +36,7 @@
             , <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // D8 - row 3
             , <&gpio1 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // D9 - row 4
     ;
+    };
 
     right_encoder: encoder_right {
         compatible = "alps,ec11";
