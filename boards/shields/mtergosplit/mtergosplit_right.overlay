@@ -6,7 +6,7 @@
 
 #include "mtergosplit.dtsi"
 
-&default_transform {
+&transform {
     col-offset = <7>;
 };
 
