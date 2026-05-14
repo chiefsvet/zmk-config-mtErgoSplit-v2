@@ -5,14 +5,13 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <layouts/kata0510/lily58.dtsi>
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,physical-layout = &layout;
     };
 
-    default_transform: keymap_transform_0 {
+    transform: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <14>;
         rows = <5>;
@@ -26,7 +25,7 @@
         >;
     };
 
-    kscan0: kscan {
+    kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
         diode-direction = "col2row";
@@ -51,5 +50,12 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&right_encoder>;
         triggers-per-rotation = <24>;
+    };
+    
+    layout: layout {
+        compatible = "zmk,physical-layout";
+        display-name = "mtErgoSplit Ortho 4x6";
+        transform = <&transform>;
+        kscan = <&kscan>;
     };
 };
