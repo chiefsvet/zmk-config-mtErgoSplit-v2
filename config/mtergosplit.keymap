@@ -34,7 +34,7 @@
             bindings = <&kp EQUAL>, <&kp PLUS>;
         };
 
-        td_SQT: tap_dance_equal {
+        td_SQT: tap_dance_SQT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
