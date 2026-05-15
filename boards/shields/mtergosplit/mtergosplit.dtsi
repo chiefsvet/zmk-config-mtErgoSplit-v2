@@ -9,7 +9,8 @@
 / {
     chosen {
         zmk,physical-layout = &layout;
-    };
+        zmk,kscan = &kscan;
+};
 
     transform: matrix_transform_0 {
         compatible = "zmk,matrix-transform";
