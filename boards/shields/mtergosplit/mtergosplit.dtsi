@@ -54,9 +54,71 @@
     };
     
     layout: layout {
-        compatible = "zmk,physical-layout";
-        display-name = "mtErgoSplit Ortho 4x6";
-        transform = <&transform>;
-        kscan = <&kscan>;
-    };
+    compatible = "zmk,physical-layout";
+    display-name = "mtErgoSplit Ortho 4x6";
+    transform = <&transform>;
+    kscan = <&kscan>;
+    keys = 
+        &key_physical_attrs 100 100 0    0   0 0 0  // 0  ESC
+        &key_physical_attrs 100 100 100  0   0 0 0  // 1  1
+        &key_physical_attrs 100 100 200  0   0 0 0  // 2  2
+        &key_physical_attrs 100 100 300  0   0 0 0  // 3  3
+        &key_physical_attrs 100 100 400  0   0 0 0  // 4  4
+        &key_physical_attrs 100 100 500  0   0 0 0  // 5  5
+        &key_physical_attrs 100 100 800  0   0 0 0  // 6  6
+        &key_physical_attrs 100 100 900  0   0 0 0  // 7  7
+        &key_physical_attrs 100 100 1000 0   0 0 0  // 8  8
+        &key_physical_attrs 100 100 1100 0   0 0 0  // 9  9
+        &key_physical_attrs 100 100 1200 0   0 0 0  // 10 0
+        &key_physical_attrs 100 100 1300 0   0 0 0  // 11 BSPC
+        &key_physical_attrs 100 100 0    100 0 0 0  // 12 TAB
+        &key_physical_attrs 100 100 100  100 0 0 0  // 13 Q
+        &key_physical_attrs 100 100 200  100 0 0 0  // 14 W
+        &key_physical_attrs 100 100 300  100 0 0 0  // 15 E
+        &key_physical_attrs 100 100 400  100 0 0 0  // 16 R
+        &key_physical_attrs 100 100 500  100 0 0 0  // 17 T
+        &key_physical_attrs 100 100 650  100 0 0 0  // 18 ENCODER BTN
+        &key_physical_attrs 100 100 800  100 0 0 0  // 19 Y
+        &key_physical_attrs 100 100 900  100 0 0 0  // 20 U
+        &key_physical_attrs 100 100 1000 100 0 0 0  // 21 I
+        &key_physical_attrs 100 100 1100 100 0 0 0  // 22 O
+        &key_physical_attrs 100 100 1200 100 0 0 0  // 23 P
+        &key_physical_attrs 100 100 1300 100 0 0 0  // 24 -
+        &key_physical_attrs 100 100 0    200 0 0 0  // 25 SHIFT/CAPS
+        &key_physical_attrs 100 100 100  200 0 0 0  // 26 A
+        &key_physical_attrs 100 100 200  200 0 0 0  // 27 S
+        &key_physical_attrs 100 100 300  200 0 0 0  // 28 D
+        &key_physical_attrs 100 100 400  200 0 0 0  // 29 F
+        &key_physical_attrs 100 100 500  200 0 0 0  // 30 G
+        &key_physical_attrs 100 100 800  200 0 0 0  // 31 H
+        &key_physical_attrs 100 100 900  200 0 0 0  // 32 J
+        &key_physical_attrs 100 100 1000 200 0 0 0  // 33 K
+        &key_physical_attrs 100 100 1100 200 0 0 0  // 34 L
+        &key_physical_attrs 100 100 1200 200 0 0 0  // 35 ;
+        &key_physical_attrs 100 100 1300 200 0 0 0  // 36 '
+        &key_physical_attrs 100 100 0    300 0 0 0  // 37 LCTRL
+        &key_physical_attrs 100 100 100  300 0 0 0  // 38 Z
+        &key_physical_attrs 100 100 200  300 0 0 0  // 39 X
+        &key_physical_attrs 100 100 300  300 0 0 0  // 40 C
+        &key_physical_attrs 100 100 400  300 0 0 0  // 41 V
+        &key_physical_attrs 100 100 500  300 0 0 0  // 42 B
+        &key_physical_attrs 100 100 600  300 0 0 0  // 43 [
+        &key_physical_attrs 100 100 800  300 0 0 0  // 44 ]
+        &key_physical_attrs 100 100 900  300 0 0 0  // 45 N
+        &key_physical_attrs 100 100 1000 300 0 0 0  // 46 M
+        &key_physical_attrs 100 100 1100 300 0 0 0  // 47 ,
+        &key_physical_attrs 100 100 1200 300 0 0 0  // 48 .
+        &key_physical_attrs 100 100 1300 300 0 0 0  // 49 /
+        &key_physical_attrs 100 100 1400 300 0 0 0  // 50 BSLH
+        &key_physical_attrs 100 100 200  400 0 0 0  // 51 LALT
+        &key_physical_attrs 100 100 300  400 0 0 0  // 52 LGUI
+        &key_physical_attrs 100 100 400  400 0 0 0  // 53 RAISE_R
+        &key_physical_attrs 100 100 600  400 0 0 0  // 54 RET
+        &key_physical_attrs 100 100 800  400 0 0 0  // 55 SPACE
+        &key_physical_attrs 100 100 1000 400 0 0 0  // 56 RAISE_L
+        &key_physical_attrs 100 100 1100 400 0 0 0  // 57 RALT
+        &key_physical_attrs 100 100 1200 400 0 0 0  // 58 FN_KEYS
+    >;
+};
+
 };
