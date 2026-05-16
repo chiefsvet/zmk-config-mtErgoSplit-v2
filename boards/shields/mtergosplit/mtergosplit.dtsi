@@ -58,7 +58,7 @@
     display-name = "mtErgoSplit Ortho 4x6";
     transform = <&transform>;
     kscan = <&kscan>;
-    keys = 
+    keys = <
         &key_physical_attrs 100 100 0    0   0 0 0  // 0  ESC
         &key_physical_attrs 100 100 100  0   0 0 0  // 1  1
         &key_physical_attrs 100 100 200  0   0 0 0  // 2  2
