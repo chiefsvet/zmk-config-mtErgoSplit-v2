@@ -90,7 +90,7 @@ Raise_L {
         &none           &none         &kp PG_DN      &none          &kp PG_UP     &none         &none              &none     &none  &none   &none   &none  &none  &none
                                       &trans         &trans         &trans                      &trans             &trans           &trans  &trans  &trans
             >;
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 
     Fn_keys {
