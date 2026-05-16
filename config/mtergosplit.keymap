@@ -84,30 +84,24 @@ Raise_L {
 
         display-name = "Raise_L";
         bindings = <
-        &none  &none  &none   &none   &none   &none                           &none  &none         &none       &none         &none  &kp DEL
-        &none  &none  &none   &none   &none   &none                 &trans    &none  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none  &td_EQUAL
-        &none  &none  &none   &none   &none   &none                           &none  &kp C_PREV    &kp C_PP    &kp C_NEXT    &none  &td_SQT
-        &none  &none  &none   &none   &none   &none  &none          &none     &none  &none         &none       &none         &none  &none
-                      &trans  &trans  &trans         &trans         &trans           &trans        &trans      &trans
+        &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4                               &none  &none   &none   &none  &none  &none
+        &none           &none         &kp HOME       &kp UP         &kp END       &none                            &trans    &none  &none   &none   &none  &none  &none
+        &none           &none         &kp LEFT       &kp DOWN       &kp RIGHT     &none                                      &none  &none   &none   &none  &none  &none
+        &none           &none         &kp PG_DN      &none          &kp PG_UP     &none         &none              &none     &none  &none   &none   &none  &none  &none
+                                      &trans         &trans         &trans                      &trans             &trans           &trans  &trans  &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_PREV C_NEXT>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP;
         };
 
     Fn_keys {
-// -- Left Side -------------------------------------------        -- Right Side -----------------------------------------------
-// |  ESC  |  1  |  2   |  3   |    4    |    5    |                        |   6    |   7    |  8    |  9     |   0   | BKSP  |
-// |  TAB  |  Q  |  W   |  E   |    R    |    T    |               | MUTE   |   Y    |   U    |  I    |  O     |   P   |   -   |
-// | SHIFT |  A  |  S   |  D   |    F    |    G    |                        |   H    |   J    |  K    |  L     |   ;   |   '   |
-// |  CTRL |  Z  |  X   |  C   |    V    |    B    |   "["         |  "]"   |   N    |   M    |  ,    |  .     |   /   | BSLH  |
-//               | ALT  | GUI  | RaiseR  |         |  ENTER  |     | SPACE  |        | RaiseL | ROPT  | FnKeys |
 
         display-name = "Fn Keys";
         bindings = <
-        &none  &none  &none   &none   &none   &none                           &none  &none         &none       &none         &none  &kp DEL
-        &none  &none  &none   &none   &none   &none                 &kp C_PP  &none  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &none  &td_EQUAL
-        &none  &none  &none   &none   &none   &none                           &none  &kp C_PREV    &kp C_PP    &kp C_NEXT    &none  &td_SQT
-        &none  &none  &none   &none   &none   &none  &none          &none     &none  &none         &none       &none         &none  &none
-                      &trans  &trans  &trans         &trans         &trans           &trans        &trans      &trans
+        &none  &kp F1      &kp F2   &kp F3   &kp F4   &kp F5                            &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &none
+        &none  &kp F11     &kp F12  &kp F13  &kp F14  &kp F15                   &trans  &kp F16  &none   &none   &none   &none    &none  
+        &none  &none       &none    &none    &none    &none                             &none    &none   &none   &none   &none    &none
+        &none  &sys_reset  &none    &none    &none    &bootloader  &none        &none   &none    &none   &none   &none   &none    &none
+                           &trans   &trans   &trans                &trans       &trans           &trans  &trans  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
