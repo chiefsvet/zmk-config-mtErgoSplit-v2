@@ -10,6 +10,7 @@
     chosen {
         zmk,physical-layout = &layout;
         zmk,kscan = &kscan;
+        zmk,battery = &vbatt;
 };
 
     transform: matrix_transform_0 {
